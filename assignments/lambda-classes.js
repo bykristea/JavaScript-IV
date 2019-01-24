@@ -24,12 +24,12 @@ class Instructor extends Person {
         return `Today we are learning about {subject}.`
     }
 
-    grade (name, subject) {
+    grade (student, subject) {
         return ` ${student.name} receives a perfect score on {subject}`
     }
 }
 
-class Student extends Instructor {
+class Student extends Person {
     constructor (attributes) {
         super(attributes)
         this.previousBackground = attributes.previousBackground
@@ -38,11 +38,28 @@ class Student extends Instructor {
     }
 
     PRAssignment (subject) {
-        return `${this.name} has submitted a PR for {subject}`;
+        return `${student.name} has submitted a PR for {subject}`;
     }
     sprintChallenge (subject) {
         `${this.name} has begun sprint challenge on {subject}`;
     }
 }
 
+
+class ProjectManager extends Instructor {
+    constructor (attributes) {
+        super(attributes)
+        this.gradClassName = attributes.gradClassName
+        this.favInstructor = attributes.favInstructor
+    }
+
+    standUp (channel) {
+        return `${this.name} announces to {channel}, @channel stand up time!`
+    }
+
+    debugsCode (student, subject) {
+        return `${this.name} debugs {student.name}'s code on {subject}`
+    }
+
+}
 
