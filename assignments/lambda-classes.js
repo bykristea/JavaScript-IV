@@ -21,11 +21,11 @@ class Instructor extends Person {
     }
 
     demo (subject) {
-        return `Today we are learning about {subject}.`
+        return `Today we are learning about ${subject}.`
     }
 
     grade (student, subject) {
-        return ` ${student.name} receives a perfect score on {subject}`
+        return ` ${student.name} receives a perfect score on ${subject}`
     }
 }
 
@@ -38,10 +38,10 @@ class Student extends Person {
     }
 
     PRAssignment (subject) {
-        return `${student.name} has submitted a PR for {subject}`;
+        return `${student.name} has submitted a PR for ${subject}`;
     }
     sprintChallenge (subject) {
-        `${this.name} has begun sprint challenge on {subject}`;
+        `${this.name} has begun sprint challenge on ${subject}`;
     }
 }
 
@@ -58,8 +58,30 @@ class ProjectManager extends Instructor {
     }
 
     debugsCode (student, subject) {
-        return `${this.name} debugs {student.name}'s code on {subject}`
+        return `${this.name} debugs {student.name}'s code on ${subject}`
     }
 
 }
 
+const susan = new Instructor({
+    name: 'Susan',
+    location: 'Texas',
+    age: 32,
+    gender: 'Female',
+    specialty: 'Everything',
+    favLanguage: 'Javascript',
+    catchPhrase: 'Do not give up'
+
+});
+const tom = new Instructor({
+    name: 'Tom',
+    location: 'Utah',
+    age: 38,
+    gender: 'Male',
+    specialty: 'back-end',
+    favLanguage: 'React',
+    catchPhrase: 'How you doin',
+
+});
+console.log(susan.demo('CSS'));
+console.log(tom.speak());
