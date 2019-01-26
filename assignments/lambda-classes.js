@@ -148,7 +148,7 @@ const steven = new ProjectManager({
 
 });
 console.log(susan.demo('CSS'));
-console.log(susan.grade(bo));
+console.log(susan.grade(bo, 'JS'));
 console.log(tom.speak());
 console.log(tom.grade(kristea, 'CSS'));
 console.log(kristea.grade);
